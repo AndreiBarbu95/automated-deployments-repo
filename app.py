@@ -17,12 +17,12 @@ def hello():
     logging.info(f"{request.remote_addr} - - [{time.strftime('%d/%b/%Y %H:%M:%S')}] \"{request.method} {url} {request.environ.get('SERVER_PROTOCOL')}\" {user_agent}")
     return f"<h1><center>{hostName} {request.remote_addr}</center></h1>"
 
-@app.route("/images")
+@app.route("/ad")
 def images():
     user_agent = request.headers.get('User-Agent')
     url = request.url
     logging.info(f"{request.remote_addr} - - [{time.strftime('%d/%b/%Y %H:%M:%S')}] \"{request.method} {url} {request.environ.get('SERVER_PROTOCOL')}\" {user_agent}")
-    return "<h1><center>Images</center></h1>"
+    return "<h1><center>I enjoyed using Automated Deployments feature in AKS!</center></h1>"
 
 @app.route("/videos")
 def videos():
